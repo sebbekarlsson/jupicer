@@ -76,8 +76,20 @@ nav {
   justify-content: center;
   background-color: black; }
 
+.feed-image {
+  width: 108px;
+  height: 108px;
+  margin: 4px;
+  transition: .3s; }
+
 .feed-image:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  outline-color: #d35400;
+  outline-width: 4px;
+  outline-style: solid;
+  width: 112px;
+  height: 112px;
+  transition: .3s; }
 
 .content {
   width: 100%;

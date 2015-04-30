@@ -97,11 +97,20 @@ nav {
 }
 
 .feed-image {
-	//nothing
+	width:108px;
+	height:108px;
+	margin:4px;
+	transition:.3s;
 }
 
 .feed-image:hover {
 	cursor: pointer;
+	outline-color:$orange;
+	outline-width:4px;
+	outline-style: solid;
+	width:112px;
+	height:112px;
+	transition:.3s;
 }
 
 .content {
