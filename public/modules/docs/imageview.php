@@ -43,7 +43,7 @@
 	<ul class="left">
 		<li class="hide-small">Uploaded by: <span class="orange-text"><?php echo $uploader->username; ?></span></li>
 		<li class="hide-small"><?php echo $date; ?></li>
-		<li class="hide-small"><a class="barbtn" href="uploads/<?php echo $filename; ?>">Show</a></li>
+		<li class="hide-small"><a class="barbtn" href="uploads/<?php echo $filename; ?>">Source</a></li>
 	</ul>
 	<ul class="right">
 		<?php if(is_loggedin()){ ?>
