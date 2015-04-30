@@ -28,13 +28,13 @@ nav {
     position: relative; }
     nav ul .navbtn, nav li .navbtn {
       color: lightgray;
-      font-size: 16px;
+      font-size: 14px;
       text-decoration: none;
       transition: .3s; }
       nav ul .navbtn:hover, nav li .navbtn:hover {
         color: #d35400;
         text-decoration: none;
-        font-size: 16px; }
+        transition: .3s; }
     nav ul #brand, nav li #brand {
       color: #d35400;
       margin-left: 26px;

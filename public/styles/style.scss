@@ -36,13 +36,14 @@ nav {
 
 		.navbtn {
 			color: lightgray;
-			font-size: 16px;
+			font-size: 14px;
 			text-decoration: none;
 			transition: .3s;
+
 			&:hover {
 				color: $orange;
 				text-decoration: none;
-				font-size: 16px;
+				transition:.3s;
 			}
 		}
 
