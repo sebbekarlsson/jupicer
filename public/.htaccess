@@ -1,2 +1,3 @@
 RewriteEngine on
 RewriteRule ^f/([^/\.]+)/?$ index.php?folder=$1 [L]
+RewriteRule ^f/([^/\.]+)/([^/\.]+)/?$ index.php?doc=imageview.php&folder=$1&imageID=$2 [L]
