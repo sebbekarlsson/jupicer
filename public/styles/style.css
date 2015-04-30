@@ -288,6 +288,9 @@ nav {
   #search-input {
     display: none; }
 
+  #brand, #brand-image {
+    display: none; }
+
   .hide-small {
     opacity: 0;
     display: none; }
