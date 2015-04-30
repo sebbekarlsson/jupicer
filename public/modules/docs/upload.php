@@ -35,7 +35,7 @@
 						return;
 					}
 
-					if(strlen($foldername) <= 3){
+					if(strlen($foldername) < 3){
 						echo "<p>Foldername must be at least 3 characters!</p>";
 						return;
 					}
