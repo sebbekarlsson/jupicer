@@ -167,8 +167,7 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 12px;
     text-align: left;
-    color: lightgray;
-    overflow: scroll; }
+    color: lightgray; }
 
 .image-data-bar {
   width: 100%;
