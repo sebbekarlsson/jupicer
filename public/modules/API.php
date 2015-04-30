@@ -33,7 +33,8 @@
 		global $db;
 		$images = array();
 
-		$result = $db->query("SELECT * FROM images WHERE folderName='$folder' ORDER BY imageDate DESC");
+		$result = $db->prepare("SELECT * FROM images WHERE folderName='$folder' ORDER BY imageDate DESC");
+		$result->execute();
 		while(($row = $result->fetch()) != false){
 			array_push($images, $row);
 		}
@@ -45,7 +46,8 @@
 		global $db;
 		$images = array();
 
-		$result = $db->query("SELECT * FROM images ORDER BY imageDate DESC LIMIT $limit");
+		$result = $db->prepare("SELECT * FROM images ORDER BY imageDate DESC LIMIT $limit");
+		$result->execute();
 		while(($row = $result->fetch()) != false){
 			array_push($images, $row);
 		}
@@ -57,7 +59,8 @@
 		$folders = array();
 		global $db;
 
-		$result = $db->query("SELECT * FROM folders ORDER BY folderName ASC LIMIT $limit");
+		$result = $db->prepare("SELECT * FROM folders ORDER BY folderName ASC LIMIT $limit");
+		$result->execute();
 		while(($row = $result->fetch()) != false){
 			$folder = new Folder($row['folderName']);
 			$folder->fetch_build();
@@ -70,7 +73,8 @@
 	function user_email_exists($email){
 		global $db;
 
-		$result = $db->query("SELECT * FROM users WHERE userEmail='$email'");
+		$result = $db->prepare("SELECT * FROM users WHERE userEmail='$email'");
+		$result->execute();
 		$count = 0;
 		while(($row = $result->fetch()) != false){
 			$count++;
@@ -82,7 +86,8 @@
 	function user_name_exists($name){
 		global $db;
 
-		$result = $db->query("SELECT * FROM users WHERE userName='$name'");
+		$result = $db->prepare("SELECT * FROM users WHERE userName='$name'");
+		$result->execute();
 		$count = 0;
 		while(($row = $result->fetch()) != false){
 			$count++;
@@ -102,7 +107,8 @@
 		function fetch_build(){
 			global $db;
 
-			$result = $db->query("SELECT * FROM folders WHERE folderName='$this->name'");
+			$result = $db->prepare("SELECT * FROM folders WHERE folderName='$this->name'");
+			$result->execute();
 			while(($row = $result->fetch()) != false){
 				$this->date = $result->date;
 			}
@@ -111,14 +117,16 @@
 		function make(){
 			global $db;
 
-			$db->query("REPLACE INTO folders (folderName) VALUES('$this->name')");
+			$result = $db->prepare("REPLACE INTO folders (folderName) VALUES('$this->name')");
+			$result->execute();
 		}
 
 		function get_size(){
 			global $db;
 			$size = 0;
 
-			$result = $db->query("SELECT * FROM images WHERE folderName='$this->name'");
+			$result = $db->prepare("SELECT * FROM images WHERE folderName='$this->name'");
+			$result->execute();
 			while(($row = $result->fetch()) != false){
 				$size++;
 			}
@@ -140,7 +148,8 @@
 		function fetch_build(){
 			global $db;
 
-			$result = $db->query("SELECT * FROM users WHERE userID=$this->id");
+			$result = $db->prepare("SELECT * FROM users WHERE userID=$this->id");
+			$result->execute();
 			while(($row = $result->fetch()) != false){
 				$this->username = $row['userName'];
 				$this->email = $row['userEmail'];
@@ -151,13 +160,15 @@
 		function register(){
 			global $db;
 
-			$db->query("INSERT INTO users (userName, userEmail, userPassword) VALUES('$this->username', '$this->email', '$this->password')");
+			$result = $db->query("INSERT INTO users (userName, userEmail, userPassword) VALUES('$this->username', '$this->email', '$this->password')");
+			$result->execute();
 		}
 
 		function login(){
 			global $db;
 
-			$result = $db->query("SELECT * FROM users WHERE userName='$this->username'");
+			$result = $db->prepare("SELECT * FROM users WHERE userName='$this->username'");
+			$result->execute();
 			while(($row = $result->fetch()) != false){
 				$realpass = $row['userPassword'];
 				$id = $row['userID'];
@@ -186,7 +197,8 @@
 		function fetch_build(){
 			global $db;
 
-			$result = $db->query("SELECT * FROM comments WHERE commentID=$this->id");
+			$result = $db->prepare("SELECT * FROM comments WHERE commentID=$this->id");
+			$result->execute();
 			while(($row = $result->fetch()) != false){
 				$this->userID = $row['userID'];
 				$this->imageID = $row['imageID'];
@@ -198,7 +210,8 @@
 		function publish(){
 			global $db;
 
-			$db->query("INSERT INTO comments (userID, imageID, commentText) VALUES($this->userID, $this->imageID, '$this->text')");
+			$result = $db->prepare("INSERT INTO comments (userID, imageID, commentText) VALUES($this->userID, $this->imageID, '$this->text')");
+			$result->execute();
 		}
 	}
 
