@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+nav {
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  vertical-align: middle;
+  background-color: black; }
+  nav #nav-select {
+    width: 150px;
+    height: 32px;
+    background-color: #d35400;
+    color: white;
+    outline: none;
+    border: none; }
+  nav ul, nav li {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative; }
+    nav ul .navbtn, nav li .navbtn {
+      color: lightgray;
+      font-size: 16px;
+      text-decoration: none;
+      transition: .3s; }
+    nav ul .navbtn:hover, nav li .navbtn:hover {
+      color: #d35400;
+      text-decoration: none;
+      font-size: 16px; }
+    nav ul #brand, nav li #brand {
+      color: #d35400;
+      margin-left: 16px; }
+    nav ul #brand-image, nav li #brand-image {
+      width: 32px;
+      height: 32px;
+      margin-top: 12px;
+      position: absolute;
+      left: 0; }
+    nav ul #brand-image:hover, nav li #brand-image:hover {
+      cursor: pointer; }
+    nav ul #search-input, nav li #search-input {
+      height: 32px;
+      width: 200px;
+      outline: none;
+      color: #d35400;
+      font-size: 100%;
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #d35400; }
+  nav .left {
+    float: left; }
+  nav .right {
+    float: right; }
+
+.image-feed {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-wrap: wrap;
+  background-color: black; }
+
+.feed-image {
+  width: 10%;
+  padding-bottom: 10%;
+  background-size: cover;
+  background-position: center;
+  background-color: black; }
+
+.feed-image:hover {
+  cursor: pointer; }
+
+.content {
+  width: 100%;
+  position: relative;
+  background-color: white; }
+
+.content-bg {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center; }
+  .content-bg span {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; }
+    .content-bg span form {
+      width: 80%;
+      display: block; }
+      .content-bg span form .btn {
+        min-width: 120px;
+        min-height: 32px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+        text-decoration: none;
+        background-color: transparent;
+        outline-color: white;
+        outline-width: 1px;
+        outline-style: solid;
+        color: white;
+        border: none;
+        transition: .3s; }
+      .content-bg span form .btn:hover {
+        background-color: #d35400;
+        cursor: pointer;
+        transition: .3s; }
+      .content-bg span form .intext {
+        background-color: transparent;
+        outline: none;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: white;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        color: white;
+        padding-left: 4px; }
+
+.intext {
+  width: 80%;
+  height: 32px;
+  font-size: 100%; }
+
+.struct {
+  display: block;
+  margin-bottom: 4px; }
+
+.imageview {
+  width: 100%;
+  height: 480px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  position: relative; }
+  .imageview .infobox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    text-align: left;
+    color: lightgray;
+    overflow: scroll; }
+
+.imageview:hover {
+  cursor: pointer; }
+
+.image-data-bar {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  background-color: black;
+  color: lightgray; }
+  .image-data-bar ul, .image-data-bar li {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline; }
+    .image-data-bar ul .barbtn, .image-data-bar li .barbtn {
+      color: lightgray;
+      font-size: 16px;
+      transition: .3s;
+      text-decoration: none; }
+    .image-data-bar ul .barbtn:hover, .image-data-bar li .barbtn:hover {
+      color: #d35400;
+      cursor: pointer;
+      transition: .3s; }
+  .image-data-bar .left {
+    float: left; }
+  .image-data-bar .right {
+    float: right; }
+
+.image-form {
+  display: none; }
+  .image-form .intext {
+    background-color: transparent;
+    outline: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: gray;
+    padding-left: 4px;
+    width: 100%; }
+
+.comment {
+  width: 100%;
+  min-height: 64px;
+  background-color: white;
+  border-bottom-color: gray;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-wrap: wrap; }
+  .comment .comment-top {
+    height: 24px;
+    line-height: 24px;
+    width: 100%;
+    background-color: lightgray;
+    color: gray; }
+    .comment .comment-top ul, .comment .comment-top li {
+      display: inline; }
+    .comment .comment-top li {
+      margin-right: 10px; }
+    .comment .comment-top ul {
+      padding-left: 12px; }
+    .comment .comment-top .left {
+      float: left; }
+    .comment .comment-top .right {
+      float: right; }
+  .comment .comment-text {
+    padding: 12px;
+    width: 100%;
+    color: black; }
+
+.orange-text {
+  color: #d35400; }
+
+.text {
+  padding: 12px; }
+
+@media screen and (max-width: 700px) {
+  #search-input {
+    display: none; }
+
+  .hide-small {
+    opacity: 0;
+    display: none; }
+
+  .infobox {
+    width: 300px !important; }
+
+  .feed-image {
+    width: 25%;
+    padding-bottom: 25%; } }
+
+/*# sourceMappingURL=style.css.map */
