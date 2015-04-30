@@ -325,6 +325,16 @@ nav {
 	padding: 12px;
 }
 
+.link{
+	color:white;
+	transition:.3s;
+}
+
+.link:hover{
+	color:$orange;
+	transition:.3s;
+}
+
 @media screen and (max-width: 700px) {
     #search-input {
         display: none;

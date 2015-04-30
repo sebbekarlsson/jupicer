@@ -57,7 +57,7 @@
 		$folders = array();
 		global $db;
 
-		$result = $db->query("SELECT * FROM folders LIMIT $limit");
+		$result = $db->query("SELECT * FROM folders ORDER BY folderName ASC LIMIT $limit");
 		while(($row = $result->fetch()) != false){
 			$folder = new Folder($row['folderName']);
 			$folder->fetch_build();
@@ -112,6 +112,18 @@
 			global $db;
 
 			$db->query("REPLACE INTO folders (folderName) VALUES('$this->name')");
+		}
+
+		function get_size(){
+			global $db;
+			$size = 0;
+
+			$result = $db->query("SELECT * FROM images WHERE folderName='$this->name'");
+			while(($row = $result->fetch()) != false){
+				$size++;
+			}
+
+			return $size;
 		}
 	}
 

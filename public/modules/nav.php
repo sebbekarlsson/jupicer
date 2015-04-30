@@ -3,10 +3,10 @@
 		<ul>
 			<li><img src="images/jupicter.png" id="brand-image"></li>
 			<li><a class="navbtn" href="index.php" id="brand">Jupicer</a></li>
-
 			<form method="get" style="display:inline;">
 				<li><input type="text" id="search-input" name="folder" placeholder="Search"></li>
 			</form>
+			<li><a class="navbtn" href="index.php?doc=folders.php">Folders</a></li>
 		</ul>
 	</div>
 	<div class="right">
