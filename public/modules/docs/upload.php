@@ -19,6 +19,7 @@
 
 					$file = $_FILES['uploaded_file'];
 					$foldername = strip_tags(strtolower($_POST['upload_folder']));
+					$foldername = str_replace(" ", "", $foldername);
 					$text = $_POST['upload_text'];
 
 					$folder = new Folder($foldername);
