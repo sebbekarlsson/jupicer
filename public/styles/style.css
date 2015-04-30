@@ -262,6 +262,7 @@ nav {
 
 .link {
   color: white;
+  text-decoration: none;
   transition: .3s; }
 
 .link:hover {
