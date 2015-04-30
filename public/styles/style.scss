@@ -9,6 +9,7 @@ $orange: #d35400;
 html, body {
 	min-height: 100% !important;
 	height: 100%;
+	background-color:black;
 }
 
 nav {
@@ -105,8 +106,7 @@ nav {
 
 .content {
 	width: 100%;
-	min-height: 100vh;
-	background-color:black;
+	height: calc(100% - 64px);
 	position: relative;
 }
 
@@ -186,7 +186,7 @@ nav {
 
 .imageview {
 	width: 100%;
-	height: 460px;
+	height: calc(100% - 48px);
 	position: relative;
 	overflow: hidden;
 
