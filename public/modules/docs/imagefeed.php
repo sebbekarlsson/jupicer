@@ -38,9 +38,8 @@
 
 			?>
 				
-				<div id="<?php echo $i; ?>" class="feed-image" imageID="<?php echo $img['imageID']; ?>" style="background-image:url(<?php echo $image; ?>)">
-					<span></span>
-				</div>
+				<img id="<?php echo $i; ?>" width="108" height="108" class="feed-image" imageID="<?php echo $img['imageID']; ?>" src="<?php echo $image; ?>">
+				
 				
 			<?php
 		}
