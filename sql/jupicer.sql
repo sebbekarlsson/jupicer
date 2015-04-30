@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: *.dev
--- Generation Time: Apr 30, 2015 at 08:12 AM
+-- Generation Time: Apr 30, 2015 at 08:14 AM
 -- Server version: 5.6.23
 -- PHP Version: 5.5.14
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `picpal`
+-- Database: `jupicer`
 --
 
 -- --------------------------------------------------------
