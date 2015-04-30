@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<base href="/" />
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>

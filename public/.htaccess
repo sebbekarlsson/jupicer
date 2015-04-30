@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^f/([^/\.]+)/?$ index.php?folder=$1 [L]
