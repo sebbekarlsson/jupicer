@@ -25,7 +25,7 @@
 			$filename = $img['imageFilename'];
 			$image = "thumbs/$filename";
 			if(!file_exists("thumbs/$filename")){
-				$imeg = "http://jupicer.com/apps/resizor.php?url=../uploads/$filename&width=$size&height=$size";
+				$imeg = "$resizor_location?url=../uploads/$filename&width=$size&height=$size";
 				$ch = curl_init($imeg);
 				$fp = fopen("thumbs/$filename", 'wb');
 				curl_setopt($ch, CURLOPT_FILE, $fp);
@@ -34,6 +34,7 @@
 				curl_close($ch);
 				fclose($fp);
 			}
+
 
 			?>
 				

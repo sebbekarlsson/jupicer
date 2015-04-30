@@ -3,6 +3,7 @@
 	session_start();
 
 	$ini = parse_ini_file(("config.ini"), true);
+	$resizor_location = $ini["database"]["resizor_location"];
 	$db = new PDO('mysql:host='.$ini["database"]["host"].';dbname='.$ini["database"]["dbname"].';', $ini["database"]["username"], $ini["database"]["password"]);
 
 	if(is_loggedin()){
