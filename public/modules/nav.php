@@ -1,8 +1,8 @@
 <nav id="top-nav">
 	<div class="left">
 		<ul>
-			<li><img src="images/jupicter.png" id="brand-image"></li>
-			<li><a class="navbtn" href="index.php" id="brand">Jupicer</a></li>
+			<li class="brand"><img src="images/jupicter.png" id="brand-image"></li>
+			<li class="brand"><a class="navbtn" href="index.php" id="brand">Jupicer</a></li>
 			<form method="get" style="display:inline;">
 				<li><input type="text" id="search-input" name="folder" placeholder="Search"></li>
 			</form>
