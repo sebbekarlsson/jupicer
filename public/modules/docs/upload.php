@@ -18,7 +18,7 @@
 					}
 
 					$file = $_FILES['uploaded_file'];
-					$foldername = $_POST['upload_folder'];
+					$foldername = strtolower($_POST['upload_folder']);
 					$text = $_POST['upload_text'];
 
 					$folder = new Folder($foldername);
