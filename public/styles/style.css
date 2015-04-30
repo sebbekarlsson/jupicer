@@ -80,9 +80,9 @@ nav {
 
 .content {
   width: 100%;
-  height: calc(100% - 64px);
-  position: relative;
-  background-color: white; }
+  min-height: 100vh;
+  background-color: black;
+  position: relative; }
 
 .content-bg {
   width: 100%;
