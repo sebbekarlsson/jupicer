@@ -1,5 +1,5 @@
 <?php
-	
+
 	session_start();
 
 	$ini = parse_ini_file(("../config.ini"), true);
