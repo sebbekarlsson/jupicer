@@ -5,15 +5,16 @@
 	$ids = array();
 	$imageID = $_GET['imageID'];
 	$folder = $_GET['folder'];
-	$sql = "SELECT * FROM images WHERE imageID <= $imageID AND folderName='$folder' ORDER BY imageDate DESC LIMIT 3";
+	$sql = "SELECT * FROM images WHERE imageID >= $imageID WHERE folderName='$folder' LIMIT 3";
 	if($folder == "*"){
-		$sql = "SELECT * FROM images WHERE imageID <= $imageID ORDER BY imageDate DESC LIMIT 3";
+		$sql = "SELECT * FROM images WHERE imageID >= $imageID LIMIT 3";
 	}
 	$result = $db->query($sql);
 	$count = 0;
 	while(($row = $result->fetch()) != false){
 		if($count == 0){
 			$filename = $row['imageFilename'];
+			echo "fname:".$filename;
 			$text = $row['imageText'];
 			$date = $row['imageDate'];
 			$uploader = new User($row['userID']);
@@ -22,8 +23,8 @@
 		array_push($ids, $row['imageID']);
 		$count++;
 	}
-	$nextID = $ids[1];
 
+	$nextID = $ids[1];
 	$comments = array();
 
 	$result = $db->query("SELECT * FROM comments WHERE imageID=$imageID ORDER BY commentDate DESC");
