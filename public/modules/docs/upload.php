@@ -23,6 +23,7 @@
 					$text = $_POST['upload_text'];
 
 					$folder = new Folder($foldername);
+					$folder->userID = $USER->id;
 					$folder->make();
 
 					$extensions = array("jpg", "JPG", "jpeg", "JPEG", "png", "bmp", "gif");
@@ -56,8 +57,9 @@
 					}
 
 					if(move_uploaded_file($file['tmp_name'], "uploads/$newname")){
-						$dbq = $db->prepare("INSERT INTO images (imageFilename, imageText, folderName, userID) VALUES('$newname', '$text', '$foldername', $USER->id)");
-						$dbq->execute();
+						echo "asp";
+						$result = $db->prepare("INSERT INTO images (imageFilename, imageText, folderName, userID) VALUES('$newname', '$text', '$foldername', $USER->id)");
+						$result->execute();
 						$lastID = $db->lastInsertId();
 						?>
 							<script>
