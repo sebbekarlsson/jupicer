@@ -3,7 +3,7 @@
 
 	$doc = $_GET['doc'];
 	if(!isset($_GET['doc'])){
-		$doc = "loading.php";
+		$doc = "imagefeed.php";
 	}
 
 ?>
