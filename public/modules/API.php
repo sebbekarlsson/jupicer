@@ -99,6 +99,7 @@
 	class Folder{
 		var $name;
 		var $date;
+		var $userID;
 
 		function __construct($name){
 			$this->name = $name;
@@ -110,14 +111,15 @@
 			$result = $db->prepare("SELECT * FROM folders WHERE folderName='$this->name'");
 			$result->execute();
 			while(($row = $result->fetch()) != false){
-				$this->date = $result->date;
+				$this->date = $row["date"];
+				$this->userID = $row["userID"];
 			}
 		}
 
 		function make(){
 			global $db;
 
-			$result = $db->prepare("REPLACE INTO folders (folderName) VALUES('$this->name')");
+			$result = $db->prepare("REPLACE INTO folders (folderName, userID) VALUES('$this->name', $this->userID)");
 			$result->execute();
 		}
 
