@@ -5,7 +5,7 @@
 	$ids = array();
 	$imageID = $_GET['imageID'];
 	$folder = $_GET['folder'];
-	$sql = "SELECT * FROM images WHERE imageID >= $imageID WHERE folderName='$folder' LIMIT 3";
+	$sql = "SELECT * FROM images WHERE imageID >= $imageID AND folderName='$folder' LIMIT 3";
 	if($folder == "*"){
 		$sql = "SELECT * FROM images WHERE imageID >= $imageID LIMIT 3";
 	}

@@ -29,11 +29,11 @@
 		unset($_SESSION['userID']);
 	}
 
-	function folder_get_images($folder){
+	function folder_get_images($folder, $limit){
 		global $db;
 		$images = array();
 
-		$result = $db->prepare("SELECT * FROM images WHERE folderName='$folder' ORDER BY imageDate DESC");
+		$result = $db->prepare("SELECT * FROM images WHERE folderName='$folder' ORDER BY imageDate DESC LIMIT $limit");
 		$result->execute();
 		while(($row = $result->fetch()) != false){
 			array_push($images, $row);

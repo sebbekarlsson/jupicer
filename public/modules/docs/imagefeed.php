@@ -11,7 +11,7 @@
 	if($_GET['folder'] == "*" && $_GET['sort'] == "latest"){
 		$images = folders_get_images_latest(1000);
 	}else{
-		$images = folder_get_images($_GET['folder']);
+		$images = folder_get_images($_GET['folder'], 2000);
 	}
 
 
